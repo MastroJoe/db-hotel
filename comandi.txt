@@ -2,12 +2,12 @@ Query Singola
 1. SELECT * FROM `ospiti` WHERE `document_type` = 'CI';
 2. SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-31';
 3. SELECT * FROM `ospiti` WHERE `date_of_birth` < '2001-05-06';
-4. SELECT * FROM `ospiti` WHERE `name` LIKE 'd%';
+4. SELECT * FROM `ospiti` WHERE `name` LIKE 'D%';
 5. SELECT SUM(`price`) FROM `pagamenti` WHERE `status` = 'accepted';
-6.
-7.
-8.
-9.
+6. SELECT MAX(`price`) FROM `pagamenti`;
+7. SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%';
+8. SELECT COUNT(`ospite_id`) AS 'Totale paganti ospiti' FROM `paganti` WHERE `ospite_id` <> 'NULL';
+9. SELECT SUM(`beds`) AS 'Posti letto tot' FROM `stanze`;
 
 Query GROUP BY
 1.
