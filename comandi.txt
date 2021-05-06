@@ -1,0 +1,17 @@
+Query Singola
+1. SELECT * FROM `ospiti` WHERE `document_type` = 'CI';
+2. SELECT * FROM `ospiti` WHERE `date_of_birth` > '1988-12-31';
+3. SELECT * FROM `ospiti` WHERE `date_of_birth` < '2001-05-06';
+4. SELECT * FROM `ospiti` WHERE `name` LIKE 'd%';
+5. SELECT SUM(`price`) FROM `pagamenti` WHERE `status` = 'accepted';
+6.
+7.
+8.
+9.
+
+Query GROUP BY
+1.
+2.
+3.
+4.
+5.
