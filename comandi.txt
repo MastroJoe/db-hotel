@@ -10,8 +10,8 @@ Query Singola
 9. SELECT SUM(`beds`) AS 'Posti letto tot' FROM `stanze`;
 
 Query GROUP BY
-1.
-2.
-3.
-4.
-5.
+1.  SELECT YEAR(`date_of_birth`), COUNT(`id`) FROM `ospiti` GROUP BY YEAR(`date_of_birth`);
+2.  SELECT SUM(`price`), `status` FROM `pagamenti` GROUP BY `status`;
+3.  SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`;
+4.  SELECT COUNT(`id`), EXTRACT(HOUR FROM `created_at`) FROM `prenotazioni` GROUP BY EXTRACT(HOUR FROM `created_at`);
+5.  SELECT MAX(conteggio.mycount) FROM ( SELECT COUNT(`ospite_id`) AS mycount FROM `prenotazioni_has_ospiti` GROUP BY `ospite_id`) conteggio;
