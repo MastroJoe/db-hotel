@@ -17,7 +17,8 @@ Query GROUP BY
 5.  SELECT MAX(conteggio.mycount) FROM ( SELECT COUNT(`ospite_id`) AS mycount FROM `prenotazioni_has_ospiti` GROUP BY `ospite_id`) conteggio;
 
 Query JOIN
-1.
+1.  SELECT ospiti.name, ospiti.lastname, COUNT(prenotazioni_has_ospiti.id) AS numero_prenotazioni FROM ospiti
+    INNER JOIN prenotazioni_has_ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id GROUP BY ospiti.id HAVING numero_prenotazioni > 2 ORDER BY numero_prenotazioni DESC;
 2.
 3.
 4.
