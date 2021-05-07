@@ -15,3 +15,11 @@ Query GROUP BY
 3.  SELECT `stanza_id`, COUNT(`id`) FROM `prenotazioni` GROUP BY `stanza_id`;
 4.  SELECT COUNT(`id`), EXTRACT(HOUR FROM `created_at`) FROM `prenotazioni` GROUP BY EXTRACT(HOUR FROM `created_at`);
 5.  SELECT MAX(conteggio.mycount) FROM ( SELECT COUNT(`ospite_id`) AS mycount FROM `prenotazioni_has_ospiti` GROUP BY `ospite_id`) conteggio;
+
+Query JOIN
+1.
+2.
+3.
+4.
+5.
+6.
