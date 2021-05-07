@@ -20,7 +20,8 @@ Query JOIN
 1.  SELECT ospiti.name, ospiti.lastname, COUNT(prenotazioni_has_ospiti.id) AS numero_prenotazioni FROM ospiti
     INNER JOIN prenotazioni_has_ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id GROUP BY ospiti.id HAVING numero_prenotazioni > 2 ORDER BY numero_prenotazioni DESC;
 2.  SELECT prenotazioni_has_ospiti.*, ospiti.name, ospiti.lastname FROM ospiti INNER JOIN prenotazioni_has_ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id;
-3.
+3.  SELECT paganti.name, paganti.lastname, price FROM pagamenti INNER JOIN prenotazioni ON pagamenti.prenotazione_id = prenotazioni.id INNER JOIN paganti
+    ON pagamenti.pagante_id = paganti.id WHERE YEAR(prenotazioni.created_at) = '2018' AND MONTH(prenotazioni.created_at) = '5';
 4.
 5.
 6.
