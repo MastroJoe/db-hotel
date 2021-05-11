@@ -45,6 +45,7 @@ if ($conn && $conn->connect_error) {
       // ciclo i risultati
       while ($row) {
       ?>
+      
       <!-- Stampo i risultati -->
         <div><a href="/db-hotel/?id=<?= $row['id'] ?>"><?= "Stanza N." .$row['room_number']; ?></a></div>
       <?php
