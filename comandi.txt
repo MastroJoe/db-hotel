@@ -24,4 +24,4 @@ Query JOIN
     ON pagamenti.pagante_id = paganti.id WHERE prenotazioni.creadted_at >= '2018-05-01' AND prenotazioni.creadted_at >= '2018-05-31';
 4.  SELECT SUM(pagamenti.price) FROM stanze INNER JOIN prenotazioni ON prenotazioni.stanza_id = stanze.id INNER JOIN pagamenti ON pagamenti.prenotazione_id = prenotazioni.id WHERE stanze.floor = 1;
 5.  SELECT * FROM pagamenti INNER JOIN paganti ON pagamenti.pagante_id = pagante_id WHERE pagamenti.prenotazione_id = 7;
-6.
+6.  SELECT stanze.room_number, prenotazioni.* FROM stanze LEFT JOIN prenotazioni ON prenotazioni.stanza_id = stanza_id; 
